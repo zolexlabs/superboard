@@ -1,0 +1,28 @@
+Item,Qty,Designators,Value / Part,Description,Package,Notes
+1,1,U1,AT32F405RCT7-7,MCU - ARM Cortex-M4F (Warden: SWD/JTAG debug + CDC + LA),LQFP-64,Main controller
+2,1,U101,RP2040,MCU - dual Cortex-M0+ (RP2040 co-processor),QFN-56,
+3,1,SPI_FLASH1,W25Q128JVSIQTR,QSPI NOR flash 128 Mbit (16 MB) for RP2040,SOIC-8 (208 mil),
+4,1,U7,AMS1117-3.3,LDO regulator 3.3 V fixed,SOT-223,5 V -> 3.3 V (VCC rail)
+5,3,"U2, U4, U22",74HC595D,8-bit serial-in shift register (LED dashboard driver),SOIC-16,3 x 8 = 24 dashboard LEDs
+6,4,"U5, U6, U8, U9",TVS5V,USB ESD/TVS protection diode array (5 V),SOT-23 / SOD,On USB1 & USB2 D+/D-
+7,2,"X1, X101",12 MHz crystal,Crystal 12.000 MHz,SMD,X1=AT32 MCU, X101=RP2040
+8,2,"L1, L2",600R ferrite bead,Ferrite bead ~600 ohm @ 100 MHz,0805,Power/USB filtering
+9,4,"R1, R2, R6, R51",0R,Resistor 0 ohm (link / strap),0603,
+10,4,"R3, R4, R16, R17",5.1k,Resistor 5.1k (USB Type-C CC pulldowns),0603,Two per Type-C connector
+11,2,"R7, R136",12k,Resistor 12k,0603,
+12,4,"R8, R12, R48, R49",10k,Resistor 10k,0603,Pull-ups / SWD
+13,4,"R14, R15, R38, R39",33R,Resistor 33 ohm (series term),0603,R14/R15=RP USB; R38/R39=LED clock/data
+14,2,"R20, R21",470R,Resistor 470 ohm (LED current limit),0603,Status LEDs
+15,36,"R5, R9, R10, R11, R13, R18, R19, R22-R37, R40-R47, R50, R52, R53, R54, R138",1k,Resistor 1k,0603,Incl. 24x LED series (R22-R37 R40-R47) + dashboard/indicator
+16,2,"C1, C3",22uF,Capacitor 22 uF,0805/1206,Bulk / input
+17,8,"C9, C13, C14, C15, C16, C17, C18, C112",10uF,Capacitor 10 uF,0603/0805,Power decoupling
+18,2,"C117, C118",2.2uF,Capacitor 2.2 uF,0603,RP2040 VREG
+19,15,"C2, C5, C6, C7, C8, C10, C19, C20, C21, C114, C123, C124, C126, CD1, CD2",100nF,Capacitor 100 nF (decoupling),0603,One per supply pin
+20,4,"C11, C12, C133, C134",33pF,Capacitor 33 pF (crystal load),0603,C11/C12=X1, C133/C134=X101
+21,2,"USB1, USB2",USB Type-C 16-pin,USB Type-C receptacle (16-pin),SMD,USB1=Warden, USB2=RP2040
+22,5,"SW1, SW2, SW3, SW4, SW5",Tactile switch,Push button (4-pin SMD tact),SMD 4-pin,SW1 AT-RESET / SW2 RP-BOOT / SW3 RP-RESET / SW4 AT-BOOT0 / SW5 BTN1
+23,5,"HDR1_MCU, HDR2_MCU, HDR3_MCU, HDR101_MCU, HDR3_JT",2x10 header,Pin header 2x10 (2.54 mm) - breakout / JTAG,THT,4x MCU/RP link + 1x JTAG
+24,2,"TP1, TP2",Test point,Test point pad,-,
+25,3,"LED1, LED2, LD1",KT-0603R,LED red 0603 (status),0603,LED1=power LD1=RP-GPIO25 LED2=status
+26,25,"D0-D24",KT-0603R,LED red 0603 (dashboard),0603,24 via shift registers + 1 direct (PF7) = 25-LED dashboard
+27,3,"D25, D26, D27",KT-0603R,LED red 0603 (indicator),0603,LAD activity indicators - VERIFY population vs PCB
