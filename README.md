@@ -18,6 +18,7 @@ hardware/
   Superboard_v1.2.sch.json   editable schematic  (EasyEDA source)
   Superboard_v1.2.pcb.json   editable PCB layout (EasyEDA source)
   Superboard_v1.2_schematic.pdf
+  Superboard_v1.2_pcb.pdf    PCB layout (print)
   Superboard_v1.2_BOM.csv
 ```
 
