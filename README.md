@@ -37,5 +37,4 @@ that licence — see [`TRADEMARKS.md`](TRADEMARKS.md).
 
 ## Firmware
 
-The board firmware (co-processor + RP2040 demos) is released separately under its own
-software licence — not in this repository.
+The logic analyser firmware and host tool are in `firmware/` and `software/`, MIT.
